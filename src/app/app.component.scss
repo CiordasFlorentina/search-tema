@@ -1,0 +1,17 @@
+.content {
+  padding: 20px 50px;
+}
+
+h4 {
+  margin: 10px 0;
+  font-weight: 600;
+}
+
+
+.row {
+  display: flex;
+
+  app-bfs {
+    width: 40%;
+  }
+}
