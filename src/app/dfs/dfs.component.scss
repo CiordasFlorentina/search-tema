@@ -1,0 +1,78 @@
+td {
+  border: 1px solid grey;
+  width: 50px;
+  height: 30px;
+  text-align: center;
+  font-size: 20px;
+
+  &.queued {
+    background-color: lightgray;
+  }
+
+  &.visited {
+    background-color: rgba(133, 210, 133, 0.49);
+  }
+
+  &.blocked {
+    background-color: grey;
+  }
+
+  &.finish {
+    color: red;
+    &.visited {
+      border: 2px solid red;
+    }
+  }
+}
+
+table {
+  border-collapse: collapse;
+}
+
+.title {
+  div {
+    font-size: 1.5em;
+    padding: 50px 15px 20px 0;
+    font-weight: bold;
+    display: inline-block;
+  }
+
+  button {
+    background-color: white;
+    border: 1px solid grey;
+    border-radius: 3px;
+    height: 25px;
+    cursor: pointer;
+    padding: 0 10px 0 10px;
+  }
+}
+
+.container {
+  display: flex;
+
+  .legend {
+    margin-left: 70px;
+    height: inherit;
+    font-size: 20px;
+  }
+
+  .green {
+    width: 15px;
+    height: 15px;
+    background-color: rgba(133, 210, 133, 0.49);
+    display: inline-block;
+  }
+
+  input {
+    width: 60px;
+    margin-left: 5px;
+    height: 17px;
+    align-self: end;
+  }
+
+  .speed {
+    display: flex;
+  }
+}
+
+

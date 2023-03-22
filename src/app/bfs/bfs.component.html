@@ -1,0 +1,41 @@
+<div class="title">
+  <div>Breadth-first Search</div>
+  <button (click)="run()">RUN</button>
+</div>
+<div class="container">
+  <div>
+    <table>
+      <tbody>
+      <tr *ngFor="let row of maze">
+        <td
+          *ngFor="let cell of row"
+          [ngClass]="{
+        'blocked': cell.value === 'X',
+        'finish': cell.value === 'F',
+        'queued': cell.q,
+        'visited': cell.v
+        }"
+        >{{cell.value}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="legend">
+    <div>
+      <div class="grey"></div>
+      Node in queue
+    </div>
+    <div>
+      <div class="green"></div>
+      Node visited
+    </div>
+    <div class="speed">
+      <span>Speed: </span>
+      <input [(ngModel)]="speed"  />
+    </div>
+<!--    <div>-->
+<!--      Distance: {{distanceText}}-->
+<!--    </div>-->
+  </div>
+</div>
+
